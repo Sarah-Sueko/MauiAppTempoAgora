@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="MauiAppTempoAgora.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Tempo Agora"
+    BackgroundColor="White">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="20">
+
+      
+            <Image
+                Source="tempo.png"
+                HeightRequest="150"
+                WidthRequest="250"
+                Aspect="AspectFit"
+                HorizontalOptions="Center" />
+
+       
+            <Label
+                Text="Tempo Agora"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="Black" />
+
+     
+            <Label
+                Text="Digite uma cidade:"
+                FontSize="18"
+                TextColor="Black" />
+
+         
+            <Entry
+                x:Name="txtCidade"
+                Placeholder="Ex.: São Paulo"
+                FontSize="18"
+                TextColor="Black" />
+
+       
+            <Button
+                x:Name="btnBuscar"
+                Text="Buscar"
+                Clicked="btnBuscar_Clicked"
+                FontSize="18" />
+
+           
+            <ActivityIndicator
+                x:Name="loading"
+                IsVisible="False"
+                IsRunning="False"
+                HorizontalOptions="Center" />
+
+         
+            <VerticalStackLayout
+                x:Name="resultado"
+                IsVisible="False"
+                Spacing="10">
+
+      
+                <Label
+                    x:Name="lblCidade"
+                    Text="Cidade"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    TextColor="Black" />
+
+   
+                <Label
+                    x:Name="lblTemperatura"
+                    Text="0,0 °C"
+                    FontSize="36"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    TextColor="Black" />
+
+                <Label
+                    x:Name="lblDescricao"
+                    Text="Descrição"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    TextColor="Black" />
+
+   
+                <HorizontalStackLayout
+                    Spacing="10"
+                    HorizontalOptions="Center">
+
+                    <Label
+                        Text="🌡️"
+                        FontSize="22" />
+
+                    <Label
+                        x:Name="lblSensacao"
+                        Text="Sensação térmica: 0,0 °C"
+                        FontSize="17"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+
+    
+                <HorizontalStackLayout
+                    Spacing="10"
+                    HorizontalOptions="Center">
+
+                    <Label
+                        Text="💧"
+                        FontSize="22" />
+
+                    <Label
+                        x:Name="lblUmidade"
+                        Text="Umidade: 0%"
+                        FontSize="17"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+
+
+                <HorizontalStackLayout
+                    Spacing="10"
+                    HorizontalOptions="Center">
+
+                    <Label
+                        Text="💨"
+                        FontSize="22" />
+
+                    <Label
+                        x:Name="lblVento"
+                        Text="Vento: 0,0 m/s"
+                        FontSize="17"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout
+                    Spacing="10"
+                    HorizontalOptions="Center">
+
+                    <Label
+                        Text="👁️"
+                        FontSize="22" />
+
+                    <Label
+                        x:Name="lblVisibilidade"
+                        Text="Visibilidade: 0 km"
+                        FontSize="17"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
